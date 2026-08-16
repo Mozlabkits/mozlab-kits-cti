@@ -56,10 +56,14 @@ header {
 
 /* Marca */
 .logo-area {
-    font-size: 23px;
-    font-weight: 800;
-    color: var(--azul);
-    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-area img {
+    height: 58px;
+    width: auto;
+    display: block;
 }
 
 .logo-area span {
