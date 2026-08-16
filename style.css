@@ -1,0 +1,426 @@
+/* =========================================
+   MOZLAB KITS
+   Ciência • Tecnologia • Inovação
+   ========================================= */
+
+:root {
+    --azul: #1266a8;
+    --azul-escuro: #102a43;
+    --verde: #3b9b54;
+    --dourado: #d9a441;
+    --branco: #ffffff;
+    --cinza-claro: #f7fafb;
+    --cinza: #687987;
+    --texto: #17324d;
+    --borda: #e5ebef;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--branco);
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+/* ==============================
+   CABEÇALHO
+   ============================== */
+
+header {
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--borda);
+    padding: 16px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Marca */
+.logo-area {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--azul);
+    letter-spacing: 0.5px;
+}
+
+.logo-area span {
+    color: var(--verde);
+}
+
+/* Menu */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--texto);
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--verde);
+}
+
+/* ==============================
+   HERO
+   ============================== */
+
+.hero {
+    min-height: 78vh;
+    padding: 90px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background:
+        radial-gradient(circle at top right, rgba(59,155,84,0.12), transparent 35%),
+        linear-gradient(135deg, #eef8ff, #f7fff8);
+}
+
+.hero-text {
+    max-width: 680px;
+}
+
+.hero-text h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+
+.hero-text h1 span {
+    color: var(--azul);
+}
+
+.hero-text p {
+    max-width: 650px;
+    font-size: 19px;
+    color: var(--cinza);
+    margin-bottom: 32px;
+}
+
+/* Botões */
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background: #0e568e;
+}
+
+.btn-secondary {
+    border: 2px solid var(--verde);
+    color: var(--verde);
+    background: var(--branco);
+}
+
+.btn-secondary:hover {
+    background: var(--verde);
+    color: var(--branco);
+}
+
+/* Símbolo temporário */
+.hero-symbol {
+    width: 320px;
+    height: 320px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--branco);
+    border: 10px solid var(--verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(16,42,67,0.12);
+}
+
+.hero-symbol strong {
+    display: block;
+    font-size: 70px;
+    color: var(--azul);
+    letter-spacing: 4px;
+}
+
+/* ==============================
+   SEÇÕES
+   ============================== */
+
+section {
+    padding: 90px 6%;
+}
+
+.section-title {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: var(--cinza);
+}
+
+/* ==============================
+   SOBRE
+   ============================== */
+
+.about {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 19px;
+    color: var(--cinza);
+}
+
+/* ==============================
+   ÁREAS
+   ============================== */
+
+.areas {
+    background: var(--cinza-claro);
+}
+
+.cards {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: var(--branco);
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid var(--borda);
+    box-shadow: 0 8px 25px rgba(16,42,67,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(16,42,67,0.10);
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: var(--azul);
+    font-size: 21px;
+}
+
+.card p {
+    color: var(--cinza);
+}
+
+/* ==============================
+   PROJETOS
+   ============================== */
+
+.projects {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project {
+    padding: 35px;
+    min-height: 190px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--azul), var(--verde));
+    color: var(--branco);
+    box-shadow: 0 15px 35px rgba(16,42,67,0.12);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-6px);
+}
+
+.project h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    opacity: 0.95;
+}
+
+/* ==============================
+   FUNDADOR
+   ============================== */
+
+.founder {
+    background: var(--cinza-claro);
+    text-align: center;
+}
+
+.founder h3 {
+    font-size: 28px;
+    color: var(--azul);
+}
+
+.founder p {
+    max-width: 720px;
+    margin: 15px auto;
+    color: var(--cinza);
+}
+
+/* ==============================
+   CONTACTOS
+   ============================== */
+
+.contact {
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 18px;
+    color: var(--texto);
+}
+
+.contact-info p {
+    margin: 8px 0;
+}
+
+/* ==============================
+   RODAPÉ
+   ============================== */
+
+footer {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 40px 6%;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+footer strong {
+    font-size: 20px;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 850px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 70px;
+    }
+
+    .hero-text {
+        margin: auto;
+    }
+
+    .hero-text h1 {
+        letter-spacing: -1px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .cards,
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-symbol {
+        width: 240px;
+        height: 240px;
+    }
+
+    .hero-symbol strong {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    section {
+        padding: 65px 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+    }
+
+    .section-title h2 {
+        font-size: 31px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+}
