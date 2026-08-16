@@ -58,11 +58,14 @@ header {
 .logo-area {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .logo-area img {
-    height: 58px;
+    height: 68px;
     width: auto;
+    max-width: 230px;
+    object-fit: contain;
     display: block;
 }
 
