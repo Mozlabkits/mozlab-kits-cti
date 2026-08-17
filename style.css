@@ -346,9 +346,21 @@ section {
     text-align: center;
 }
 
+.founder img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 25px;
+    border: 5px solid var(--branco);
+    box-shadow: 0 15px 35px rgba(16, 42, 67, 0.18);
+}
+
 .founder h3 {
     font-size: 28px;
     color: var(--azul);
+    margin-bottom: 10px;
 }
 
 .founder p {
